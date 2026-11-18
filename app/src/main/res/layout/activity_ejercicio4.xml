@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Ejercicio4Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejercicio 4: Petición DELETE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#1D1D1F"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Envía una petición DELETE para eliminar el recurso en https://jsonplaceholder.typicode.com/posts/1."
+        android:textSize="14sp"
+        android:textColor="#6E6E73"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEliminarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar usuario (DELETE)"
+        android:textSize="15sp"
+        android:padding="14dp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="#D32F2F"
+        android:layout_marginBottom="20dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FAFAFA"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvResultadoDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Presione 'Eliminar usuario' para ejecutar la petición..."
+            android:textSize="15sp"
+            android:textColor="#2C3E50"
+            android:fontFamily="monospace" />
+    </ScrollView>
+
+</LinearLayout>

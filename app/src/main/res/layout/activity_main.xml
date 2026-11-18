@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicios Web Android"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1D1D1F"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guía 7: Volley, HTTP &amp; APIs Web"
+            android:textSize="14sp"
+            android:textColor="#86868B"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Ejercicio 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 1: GET Usuarios (Volley StringRequest)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 2: POST Crear Usuario (JsonObjectRequest)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 3: PUT vs PATCH (Reemplazo vs Modificación)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 4: DELETE Recurso (Eliminar Usuario)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 5 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 5: GET &amp; Imagen Volley (Rick &amp; Morty)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 6 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 6: Mini Galería (RecyclerView + DetailActivity)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ejercicio 7 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEjercicio7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 7: CRUD Gestión de Libros (Servidor Local)"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:padding="14dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>

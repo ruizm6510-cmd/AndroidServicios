@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8F9FA"
+    tools:context=".Ejercicio7Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 7: CRUD Gestión de Libros"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1D1D1F"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servidor local o API REST (json-server). Realiza operaciones CRUD completas."
+            android:textSize="13sp"
+            android:textColor="#6E6E73"
+            android:layout_marginBottom="16dp" />
+
+        <!-- URL Endpoint Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL del Servidor API"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUrlServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="http://10.0.2.2:3000/libros"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Book Data Inputs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:layout_marginEnd="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBookId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Título del Libro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBookTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cien Años de Soledad" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autor del Libro"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBookAutor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gabriel García Márquez" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Buttons Grid -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GET → Mostrar Libros"
+            android:textSize="14sp"
+            android:padding="10dp"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPostBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="POST → Agregar"
+                android:textSize="12sp"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPutBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PUT → Actualizar"
+                android:textSize="12sp"
+                app:cornerRadius="8dp"
+                android:layout_marginHorizontal="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPatchBook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PATCH → Modificar"
+                android:textSize="12sp"
+                app:cornerRadius="8dp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELETE → Eliminar Libro (por ID)"
+            android:textSize="13sp"
+            android:padding="10dp"
+            app:cornerRadius="8dp"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Results Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de Libros (RecyclerView):"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLibros"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#FFFFFF"
+            android:padding="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salida / Logs de Petición:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvLogEjercicio7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:background="#FAFAFA"
+            android:padding="8dp"
+            android:text="Listo para ejecutar peticiones..."
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:textColor="#555555" />
+
+    </LinearLayout>
+</ScrollView>
